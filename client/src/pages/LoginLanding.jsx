@@ -12,7 +12,7 @@ const LoginLanding = () => {
       icon: ShieldIcon,
     },
     {
-      to: "/login/employee",
+      to: "/login/employees",
       title: "Employee Portal",
       description:
         "View your profile, track attendance, request time off, and access payslips.",
