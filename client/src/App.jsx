@@ -30,10 +30,10 @@ const App = () => {
           }
         />
         <Route
-          path="/login/employee"
+          path="/login/employees"
           element={
             <LoginForm
-              role="employee"
+              role="employees"
               title="Employee Login"
               subTitle="Sign in to access your account"
             />
