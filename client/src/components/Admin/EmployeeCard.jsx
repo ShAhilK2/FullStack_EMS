@@ -2,6 +2,12 @@ import { PencilIcon, Trash2Icon } from "lucide-react";
 import React from "react";
 
 const EmployeeCard = ({ employee, onDelete, onEdit }) => {
+  const getInitials = (firstName, lastName) => {
+    const firstInitial = firstName?.[0] || "";
+    const lastInitial = lastName?.[0] || "";
+    return firstInitial + lastInitial || "?";
+  };
+
   const handleDelete = async () => {
     if (!confirm("Are you sure you want to delete this employee?")) {
       return;
@@ -15,8 +21,7 @@ const EmployeeCard = ({ employee, onDelete, onEdit }) => {
           {/* Circle icon */}
           <div className="w-20 h-20 rounded-full bg-linear-to-br from-indigo-100 to-slate-100 flex items-center justify-center">
             <span className="text-2xl font-medium text-indigo-400">
-              {employee.firstName[0]}
-              {employee.lastName[0]}
+              {getInitials(employee.firstName, employee.lastName)}
             </span>
           </div>
         </div>
