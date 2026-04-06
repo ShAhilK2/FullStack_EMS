@@ -131,7 +131,7 @@ const Sidebar = () => {
             const isActive = pathname.startsWith(item.href);
             return (
               <Link
-                key={item.label}
+                key={item.href}
                 to={item.href}
                 className={`group flex items-center gap-3 px-3 py-2.5 rounded-md text-[13px] font-medium transition-all duration-150 relative ${
                   isActive
